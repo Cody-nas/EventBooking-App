@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import BuyTicket from "./Pages/BuyTicket";
 import About from "./Pages/About";
+import Footer from "./Components/Footer";
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/BuyTicket" element={<BuyTicket />} />
         <Route path="/About" element={<About />} />
       </Routes>
+      <Footer />
     </>
   );
 }
