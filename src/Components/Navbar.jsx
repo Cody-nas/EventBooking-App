@@ -68,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="bg-zinc-800 absolute top-14 right-0 left-0 border-t border-gray-700 shadow-lg p-6 md:hidden">
+        <div className=" absolute top-14 right-0 left-0 border-t border-gray-700 shadow-lg p-6 md:hidden">
           <ul className="space-y-4">
             {navItems.map(({ name, path }) => (
               <li key={name}>
@@ -83,10 +83,10 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
-            <button className="py-2 px-4 text-sm font-medium bg-gray-700 hover:bg-gray-800 rounded-full">
+            <button className="py-2 px-4 text-sm font-medium border hover:bg-gray-800 rounded-full">
               Sign Up
             </button>
-            <button className="py-2 px-4 text-sm font-medium text-black bg-green-500 hover:bg-green-600 rounded-full">
+            <button className="py-2 px-4 text-sm font-medium  border hover:bg-gray-800 rounded-full">
               Login
             </button>
           </div>
