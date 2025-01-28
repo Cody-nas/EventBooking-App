@@ -1,13 +1,13 @@
-import React from "react";
-import { GoCopilot } from "react-icons/go";
-import jazznight from "../assets/jazznight.jpg";
+// import React from "react";
+// import { GoCopilot } from "react-icons/go";
+import Background from "../assets/Background.jpg";
 
 const Hero = () => {
   return (
     <div>
       <div
         className="relative bg-cover bg-center h-screen flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${jazznight})` }}
+        style={{ backgroundImage: `url(${Background})` }}
       >
         <div className="absolute inset-0  bg-opacity-50"></div>
         <div className="relative z-10 text-center px-6">

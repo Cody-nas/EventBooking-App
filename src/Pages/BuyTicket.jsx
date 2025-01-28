@@ -1,9 +1,11 @@
-import React from 'react'
+import Buy from "../Components/Buy";
 
 const BuyTicket = () => {
   return (
-    <div>BuyTicket</div>
-  )
-}
+    <div>
+      <Buy />
+    </div>
+  );
+};
 
 export default BuyTicket;
