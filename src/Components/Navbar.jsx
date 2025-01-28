@@ -1,43 +1,35 @@
 import React, { useState } from "react";
-import Logo from "../assets/Logo.png";
-// react icons
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Buy Tickets", path: "/BuyTickets" },
     { name: "About", path: "/About" },
-    // { name: "Login", path: "/Login" },
-    // { name: "Sign Up", path: "/SignUp" },
   ];
 
   return (
-    <nav className=" md:px-14 p-2 max-w-screen-2xl border-b  mx-auto fixed  right-0 left-0 z-50">
-      <div className="text-lg container mx-auto flex justify-between items-center font-medium">
+    <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center h-16">
         {/* Logo */}
-        <a
-          href="/"
-          className="text-2xl font-semibold flex items-center space-x-1.5"
-        >
-          <img src={Logo} alt="Logo" className="w-8 h-8 text-black" />
-          <span className="text-sm pr-12">Eventick</span>
-        </a>
+        <div className="flex items-center space-x-2">
+          <span className="text-2xl font-extrabold text-gray-900 tracking-wide">
+            Eventicket
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex items-center space-x-10">
           {navItems.map(({ name, path }) => (
             <li key={name}>
               <Link
                 to={path}
-                className=" hover:text-gray-400 transition-colors"
+                className="text-base font-medium text-gray-800 hover:text-blue-600 transition-all duration-300"
               >
                 {name}
               </Link>
@@ -46,11 +38,11 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex space-x-4">
-          <button className="py-2 px-4 text-sm font-mediu  bg-gray-700 hover:bg-gray-800 rounded-full">
+        <div className="hidden md:flex items-center space-x-4">
+          <button className="px-6 py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
             Sign Up
           </button>
-          <button className="py-2 px-4 text-sm font-medium text-black bg-green-500 hover:bg-green-600 rounded-full">
+          <button className="px-6 py-2 text-sm font-bold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
             Login
           </button>
         </div>
@@ -62,34 +54,34 @@ const Navbar = () => {
           aria-label="Toggle navigation menu"
         >
           {isMenuOpen ? (
-            <FaTimes className="w-6 h-6 " />
+            <FaTimes className="text-gray-900 w-6 h-6" />
           ) : (
-            <FaBars className="w-6 h-6 " />
+            <FaBars className="text-gray-900 w-6 h-6" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="bg-zinc-800 absolute top-14 right-0 left-0 border-t border-gray-700 shadow-lg p-6 md:hidden">
-          <ul className="space-y-4">
+        <div className="md:hidden bg-white shadow-lg border-t border-gray-200 absolute left-0 right-0 top-16">
+          <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map(({ name, path }) => (
               <li key={name}>
                 <Link
                   to={path}
                   onClick={toggleMenu}
-                  className="block  hover:text-gray-300 transition-colors"
+                  className="block text-gray-800 font-medium hover:text-blue-600 transition-all duration-300"
                 >
                   {name}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="mt-6 flex flex-col space-y-4">
-            <button className="py-2 px-4 text-sm font-medium bg-gray-700 hover:bg-gray-800 rounded-full">
+          <div className="flex flex-col space-y-4 px-6 pb-4">
+            <button className="w-full py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
               Sign Up
             </button>
-            <button className="py-2 px-4 text-sm font-medium text-black bg-green-500 hover:bg-green-600 rounded-full">
+            <button className="w-full py-2 text-sm font-bold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
               Login
             </button>
           </div>

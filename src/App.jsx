@@ -1,15 +1,13 @@
-import Navbar from './Components/Navbar';
-import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import BuyTicket from './Pages/BuyTicket';
-import About from './Pages/About';
+import Navbar from "./Components/Navbar";
+import Choose from "./Components/Choose";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import BuyTicket from "./Pages/BuyTicket";
+import About from "./Pages/About";
 
-
-
-import './App.css'
+import "./App.css";
 
 function App() {
-
   return (
     <>
       <Navbar />
@@ -18,9 +16,8 @@ function App() {
         <Route path="/BuyTicket" element={<BuyTicket />} />
         <Route path="/About" element={<About />} />
       </Routes>
-
     </>
   );
-};
+}
 
 export default App;
