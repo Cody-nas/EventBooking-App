@@ -1,3 +1,10 @@
+import Navbar from './Components/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import BuyTicket from './Pages/BuyTicket';
+import About from './Pages/About';
+
+
 
 import './App.css'
 
@@ -5,11 +12,15 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-red-500">
-        Hello world!
-      </h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/BuyTicket" element={<BuyTicket />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+
     </>
-  )
-}
+  );
+};
 
 export default App;
