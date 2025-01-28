@@ -23,7 +23,10 @@ const Navbar = () => {
     <nav className=" md:px-14 p-2 max-w-screen-2xl border-b  mx-auto fixed  right-0 left-0 z-50">
       <div className="text-lg container mx-auto flex justify-between items-center font-medium">
         {/* Logo */}
-        <a href="/" className="text-2xl font-semibold flex items-center space-x-1.5">
+        <a
+          href="/"
+          className="text-2xl font-semibold flex items-center space-x-1.5"
+        >
           <img src={Logo} alt="Logo" className="w-8 h-8 text-black" />
           <span className="text-sm pr-12">Eventick</span>
         </a>
