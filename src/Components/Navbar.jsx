@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/About" },
-    { name: "Buy Tickets", path: "/BuyTickets" },
+    { name: "Buy Tickets", path: "/Purchase" },
   ];
 
   return (
@@ -39,9 +39,11 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="px-6 py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
-            Sign Up
-          </button>
+          <Link to="/signup">
+            <button className="px-6 py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
+              Sign Up
+            </button>
+          </Link>
           <button className="px-6 py-2 text-sm font-bold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
             Login
           </button>
@@ -78,9 +80,11 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col space-y-4 px-6 pb-4">
-            <button className="w-full py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
-              Sign Up
-            </button>
+            <Link to="/Sign">
+              <button className="w-full py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
+                Sign Up
+              </button>
+            </Link>
             <button className="w-full py-2 text-sm font-bold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
               Login
             </button>
