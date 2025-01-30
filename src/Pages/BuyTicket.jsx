@@ -1,11 +1,12 @@
 import Buy from "../Components/Buy";
-
-const BuyTicket = () => {
+import Rolling from "../Components/Rolling";
+const Buyticket = () => {
   return (
     <div>
       <Buy />
+      <Rolling />
     </div>
   );
 };
 
-export default BuyTicket;
+export default Buyticket;

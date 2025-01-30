@@ -1,4 +1,3 @@
-// import React from React
 import buybg from "../assets/buybg.jpg";
 
 const Buy = () => {
