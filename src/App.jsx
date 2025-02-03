@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Footer from "./Components/Footer";
 import Purchase from "./Pages/Purchase";
-import SignUp from "./Pages/SignUp";
+import SignUp from "./Pages/Signup";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard/index"
 
