@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 border rounded left-0 right-0 bg-white z-50">
+    <nav className="fixed top-0 border backdrop-blur-3xl bg-opacity-30 rounded left-0 right-0  z-50">
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center h-16">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -39,15 +39,15 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4 ">
           <Link to="/signup">
-            <button className="px-6 py-2 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
+            <button className="px-6 py-2 text-sm font-bold cursor-pointer text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
               Sign Up
             </button>
           </Link>
 
           <Link to="/login">
-            <button className="px-6 py-2 text-sm font-bold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
+            <button className="px-6 py-2 text-sm font-bold cursor-pointer text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md">
               Login
             </button>
           </Link>
