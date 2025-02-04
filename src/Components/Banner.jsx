@@ -10,12 +10,10 @@ const EventBanner = () => {
         </div>
 
 
-        <div className="mt-6 lg:mt-0">
-          <h2 className="text-2xl font-medium">  Make your own Event</h2>
-          <p className="mt-2 text-gray-300 max-w-2xl ">
-            Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus
-            pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus.
-            Nascetur viverra arcu sed amet cursus purus.
+        <div className="mt-6 lg:mt-0 ">
+          <h2 className="text-2xl font-medium">"Experience Events Like Never Before!"</h2>
+          <p className="mt-2 max-w-2xl ">
+            "Step into a world where every event is a masterpiece, every moment is unforgettable, and every experience leaves you breathless. Get ready to celebrate in style and create memories that last a lifetime!"
           </p>
           <button className="mt-6 px-8 py-3 cursor-pointer bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-all">
             Explore Events
