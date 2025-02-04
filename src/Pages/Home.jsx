@@ -1,15 +1,13 @@
 import Hero from "../Components/Hero";
 import Choose from "../Components/Choose";
-import Get from "../Components/Get";
+import Banner from "../Components/Banner";
 import Upcoming from "../Components/Upcoming";
-
 const Home = () => {
   return (
     <div>
-      <Hero />
-      <Upcoming />
+      <Hero />      <Upcoming />
       <Choose />
-      <Get />
+      <Banner />
     </div>
   );
 };
