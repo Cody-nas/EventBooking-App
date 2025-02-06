@@ -34,7 +34,7 @@ const Events = () => {
     }
   };
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto mt-12 p-6">
       <img src={musicfest} alt=""
         className="w-full rounded-lg"
       />
@@ -95,14 +95,14 @@ const Events = () => {
       <h2 className="text-2xl font-semibold mt-6">About this event</h2>
       <div className="flex items-center gap-6 mt-2">
         <span className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
-          <FaClock className="text-gray-500" /> Event lasts 8 hours
+          <FaClock /> Event lasts 8 hours
         </span>
         <span className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
           <IoTicketSharp />
           ALL AGES
         </span>
-        <span className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
-          <FaParking />
+        <span className="flex  items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
+          <FaParking className="text-blue-700" />
           Free venue parking
         </span>
       </div>

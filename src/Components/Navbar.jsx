@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo-dark.svg";
+import Logo from "../assets/Logo-light.svg";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,15 +14,16 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Buy Tickets", path: "/purchase" }
 
+
   ];
 
   return (
-    <nav className="fixed top-0 backdrop-blur-3xl bg-opacity-30 rounded left-0 right-0  z-50">
+    <nav className="fixed top-0 bg-white bg-opacity-30 rounded left-0 right-0  z-50">
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center h-14">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="" />
-          <span className="text-2xl font-extrabold text-white tracking-wide">
+          <span className="text-2xl font-extrabold text-black tracking-wide">
             Eventicket
           </span>
         </div>
@@ -32,7 +34,7 @@ const Navbar = () => {
             <li key={name}>
               <Link
                 to={path}
-                className="text-base font-medium text-white hover:text-blue-600 transition-all duration-300"
+                className="text-base font-medium text-black hover:text-blue-600 transition-all duration-300"
               >
                 {name}
               </Link>
