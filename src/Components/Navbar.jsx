@@ -71,7 +71,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden backdrop-blur-3xl shadow-lg border-t border-gray-200 absolute left-0 right-0 top-16">
+        <div className="md:hidden bg-black shadow-lg border-t border-gray-200 absolute left-0 right-0 top-16">
           <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map(({ name, path }) => (
               <li key={name}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import jazz from "../assets/jazznight.jpg";
 import musicfest from "../assets/musicfest.jpg";
 import rock from "../assets/rock.jpg";
@@ -124,9 +125,11 @@ const Upcoming = () => {
                   </h2>
                   <p className="text-gray-600 mt-2">{event.location}</p>
                   <p className="text-gray-500 mt-1">{event.date}</p>
-                  <button className="mt-4 px-6 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all">
-                    Get Tickets
-                  </button>
+                  <Link to="/events">
+                    <button className="mt-4 px-6 py-2 cursor-pointer bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all">
+                      Get Tickets
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}

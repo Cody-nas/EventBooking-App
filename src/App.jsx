@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Purchase from "./Pages/Purchase";
 import SignUp from "./Pages/Signup";
 import Login from "./Pages/Login";
+import Events from "./Pages/Events"
 import Dashboard from "./Pages/Dashboard/index"
 
 import "./App.css";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
       <Footer />
     </>

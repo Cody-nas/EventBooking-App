@@ -5,7 +5,8 @@ import Upcoming from "../Components/Upcoming";
 const Home = () => {
   return (
     <div>
-      <Hero />      <Upcoming />
+      <Hero />
+      <Upcoming />
       <Choose />
       <Banner />
     </div>
