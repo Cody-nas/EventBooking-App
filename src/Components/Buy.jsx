@@ -1,5 +1,5 @@
 import { useState } from "react";
-import buybg from "../assets/buybg.jpg";
+import rock from "../assets/rock.jpg";
 
 const Buy = () => {
   const [ticketCount, setTicketCount] = useState(1);
@@ -7,11 +7,11 @@ const Buy = () => {
   const totalPrice = ticketCount * ticketType;
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-6">
+    <div className="min-h-screen mt-12 bg-gray-100 flex items-center justify-center py-12 px-6">
       <div className="max-w-4xl w-full bg-white shadow-2xl rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500">
         {/* Banner Image */}
         <div className="relative">
-          <img src={buybg} alt="Concert" className="w-full h-80 object-cover" />
+          <img src={rock} alt="Concert" className="w-full h-80 object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
             <h1 className="text-5xl font-extrabold text-white drop-shadow-lg animate-fade-in">
               Buy Your Ticket
