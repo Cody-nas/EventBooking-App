@@ -1,66 +1,100 @@
-import { useState } from "react";
-import { FaGoogle, FaFacebook } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+const slides = [
+  {
+    id: 1,
+    images: [
+      { src: "/tango.jpg", label: "TANGO LESSONS" },
+      { src: "/speed-dating.jpg", label: "SINGLES SPEED DATING" }
+    ],
+    text: "SOULMATES OR FIRST DATES\nWE'VE GOT JUST THE THING.",
+    buttonText: "Plan Valentine’s Day"
+  },
+  {
+    id: 2,
+    images: [
+      { src: "/chocolate.jpg", label: "CHOCOLATE TASTING" },
+      { src: "/wine.jpg", label: "WINE PAIRING" }
+    ],
+    text: "SWEET INDULGENCE\nA PERFECT PAIRING FOR LOVE.",
+    buttonText: "Discover Experiences"
+  },
+  {
+    id: 3,
+    images: [
+      { src: "/concert.jpg", label: "LIVE MUSIC" },
+      { src: "/dinner.jpg", label: "ROMANTIC DINNER" }
+    ],
+    text: "A NIGHT TO REMEMBER\nMUSIC, FOOD, AND LOVE.",
+    buttonText: "Book Now"
+  }
+];
+
+export default function ValentinesCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="flex h-screen w-full">
-      {/* Left Side */}
-      <div className="w-1/2 flex flex-col justify-center items-center bg-white p-10">
-        <h1 className="text-2xl font-bold mb-4">Log in to your Account</h1>
-        <p className="text-gray-500 mb-6">Welcome back! Select method to log in:</p>
-
-        <div className="flex space-x-4 mb-4">
-          <button className="flex items-center gap-2 px-6 py-2 border rounded-md text-gray-600 hover:bg-gray-100">
-            <FaGoogle className="text-red-500" /> Google
-          </button>
-          <button className="flex items-center gap-2 px-6 py-2 border rounded-md text-gray-600 hover:bg-gray-100">
-            <FaFacebook className="text-blue-500" /> Facebook
-          </button>
+    <div className="relative w-full max-w-5xl mx-auto">
+      <div className="bg-red-800 text-white p-6 rounded-lg flex items-center relative overflow-hidden">
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+        >
+          <ChevronLeft className="text-black" />
+        </button>
+        <div className="flex flex-col md:flex-row gap-6 items-center w-full justify-center">
+          <div className="flex gap-4">
+            {slides[currentIndex].images.map((img, index) => (
+              <div
+                key={index}
+                className="relative bg-gray-200 p-2 rounded-lg overflow-hidden"
+              >
+                <img src={img.src} alt={img.label} className="w-44 h-44 object-cover rounded-lg" />
+                <span className="absolute bottom-2 left-2 bg-red-700 text-white px-2 py-1 text-sm font-bold">{img.label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-bold whitespace-pre-line">{slides[currentIndex].text}</h2>
+            <Button className="mt-4 bg-white text-red-700 font-bold py-2 px-4 rounded">
+              {slides[currentIndex].buttonText}
+            </Button>
+          </div>
         </div>
-
-        <p className="text-gray-400 mb-4">or continue with email</p>
-
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full border p-3 rounded-md mb-3"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full border p-3 rounded-md mb-3"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <div className="flex justify-between w-full text-sm mb-4">
-          <label className="flex items-center">
-            <input type="checkbox" checked={rememberMe} onChange={() => setRememberMe(!rememberMe)} className="mr-2" />
-            Remember me
-          </label>
-          <a href="#" className="text-blue-500">Forgot Password?</a>
-        </div>
-
-        <button className="w-full bg-blue-600 text-white py-3 rounded-md font-bold hover:bg-blue-700">Log in</button>
-
-        <p className="text-gray-500 mt-4 text-sm">
-          Don't have an account? <a href="#" className="text-blue-500">Create an account</a>
-        </p>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+        >
+          <ChevronRight className="text-black" />
+        </button>
       </div>
-
-      {/* Right Side */}
-      <div className="w-1/2 bg-blue-600 text-white flex flex-col justify-center items-center p-10 text-center">
-        <div className="bg-white p-6 rounded-full mb-6">
-          <img src="/icons.png" alt="Integration Icons" className="w-32" />
-        </div>
-        <h2 className="text-2xl font-bold mb-4">Connect with every application.</h2>
-        <p className="text-gray-200">Everything you need in an easily customizable dashboard.</p>
+      <div className="flex justify-center mt-4 gap-2">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${currentIndex === index ? "bg-red-600" : "bg-gray-300"
+              }`}
+          />
+        ))}
       </div>
     </div>
   );
