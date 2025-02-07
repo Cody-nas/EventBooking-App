@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="fixed top-0 bg-white bg-opacity-30 rounded left-0 right-0  z-50">
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center h-14">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex cursor-pointer items-center space-x-2">
           <img src={Logo} alt="" />
           <span className="text-2xl font-extrabold text-black tracking-wide">
             Eventicket
@@ -66,9 +66,9 @@ const Navbar = () => {
           aria-label="Toggle navigation menu"
         >
           {isMenuOpen ? (
-            <FaTimes className="text-white w-6 h-6" />
+            <FaTimes className="text-black w-6 h-6" />
           ) : (
-            <FaBars className="text-white w-6 h-6" />
+            <FaBars className="text-black w-6 h-6" />
           )}
         </button>
       </div>
