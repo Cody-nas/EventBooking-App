@@ -1,5 +1,5 @@
 import Hero from "../Components/Hero";
-import Choose from "../Components/Choose";
+import Top from "../Components/Top";
 import Banner from "../Components/Banner";
 import Upcoming from "../Components/Upcoming";
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Hero />
       <Upcoming />
-      <Choose />
+      <Top />
       <Banner />
     </div>
   );

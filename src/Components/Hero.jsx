@@ -17,7 +17,7 @@ const Hero = () => {
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
             Get ready for unforgettable moments and exciting adventures.
           </p>
-          <button className="mt-6 px-8 py-3 cursor-pointer bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-all">
+          <button className="mt-8 px-8 py-3 cursor-pointer bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce ">
             Explore Events
           </button>
         </div>

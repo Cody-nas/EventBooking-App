@@ -11,7 +11,7 @@ const EventBanner = () => {
 
 
         <div className="mt-6 lg:mt-0 ">
-          <h2 className="text-2xl font-medium">"Experience Events Like Never Before!"</h2>
+          <h2 className="text-2xl font-bold">"Experience Events Like Never Before!"</h2>
           <p className="mt-2 max-w-2xl ">
             "Step into a world where every event is a masterpiece, every moment is unforgettable, and every experience leaves you breathless. Get ready to celebrate in style and create memories that last a lifetime!"
           </p>
