@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex cursor-pointer items-center space-x-2">
           <img src={Logo} alt="" />
           <span className="text-2xl font-extrabold text-black tracking-wide">
-            Eventicket
+            EvenTicket
           </span>
         </div>
 

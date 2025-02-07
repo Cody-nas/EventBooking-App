@@ -17,7 +17,7 @@ const Story = () => {
             <p className="text-gray-700 leading-relaxed text-lg mb-6">
               At{" "}
               <span className="font-semibold text-blue-500">
-                The Martins Ticket
+                EvenTicket
               </span>
               , we believe every experience begins with a single step—the
               ticket. Founded with a vision to bring people closer to the
@@ -44,7 +44,7 @@ const Story = () => {
             <p className="text-gray-700 leading-relaxed text-lg mb-6">
               With{" "}
               <span className="font-semibold text-blue-500">
-                The Martins Tickets
+                EvenTicket
               </span>
               , you’re not just buying a ticket—you’re opening the door to
               memories that will last a lifetime. So, whether you’re planning

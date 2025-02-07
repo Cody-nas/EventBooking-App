@@ -1,6 +1,5 @@
 import Abooo from "../Components/Abooo";
 import Story from "../Components/Story";
-import Call from "../Components/Call";
 import Our from "../Components/Our";
 const About = () => {
   return (
@@ -8,7 +7,6 @@ const About = () => {
       <Abooo />
       <Story />
       <Our />
-      <Call />
     </div>
   );
 };
