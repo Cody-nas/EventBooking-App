@@ -7,9 +7,9 @@ import Footer from "./Components/Footer";
 import Purchase from "./Pages/Purchase";
 import SignUp from "./Pages/Signup";
 import Login from "./Pages/Login";
-import Events from "./Pages/Events"
-import FindEvents from "./Pages/FindEvents"
-import Dashboard from "./Pages/Dashboard/index"
+import Events from "./Pages/Events";
+import FindEvents from "./Pages/FindEvents";
+import Dashboard from "./Pages/Dashboard/index";
 
 import "./App.css";
 
@@ -25,7 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/" element={<FindEvents />} />
+        <Route path="/FindEvents" element={<FindEvents />} />
       </Routes>
       <Footer />
     </>

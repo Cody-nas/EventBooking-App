@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BG from "../assets/signBG.mp4";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,12 +12,24 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-6 bg-white rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Login</h2>
+    <div className="relative flex items-center justify-center min-h-screen">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src={BG} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Login Form (Content on top) */}
+      <div className="relative z-10 w-[80%] max-w-md p-6 backdrop-blur-2xl bg-opacity-90  rounded-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-center text-black mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-600 text-sm mb-1">Email</label>
+            <label className="block text-black text-sm mb-1">Email</label>
             <input
               type="email"
               value={email}
@@ -27,7 +40,7 @@ const Login = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-600 text-sm mb-1">Password</label>
+            <label className="block text-black text-sm mb-1">Password</label>
             <input
               type="password"
               value={password}

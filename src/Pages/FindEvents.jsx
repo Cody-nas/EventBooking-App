@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Hero from "../Components/Hero";
+import Top from "../Components/Top";
+import Banner from "../Components/Banner";
+import Upcoming from "../Components/Upcoming";
 
 const FindEvents = () => {
   return (
-    <div>FindEvents</div>
-  )
-}
+    <>
+      <Hero />
+      <Top />
+      <Banner />
+      <Upcoming />
+    </>
+  );
+};
 
-export default FindEvents
+export default FindEvents;
