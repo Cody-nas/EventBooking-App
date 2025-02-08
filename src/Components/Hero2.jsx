@@ -53,9 +53,9 @@ const Hero2 = () => {
       <div className="bg-red-800 text-white p-8 rounded-xl flex items-center relative overflow-hidden">
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
         >
-          <ChevronLeft className="text-black" />
+          <ChevronLeft className="text-black w-4 h-4" />
         </button>
         <div className="flex flex-col md:flex-row gap-8 items-center w-full justify-center">
           <div className="flex gap-6">
@@ -78,17 +78,18 @@ const Hero2 = () => {
         </div>
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
         >
-          <ChevronRight className="text-black" />
+          <ChevronRight className="text-black w-4 h-4" />
         </button>
+
       </div>
       <div className="flex justify-center mt-6 gap-3">
         {slides.map((_, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-4 h-4 rounded-full cursor-pointer ${currentIndex === index ? "bg-red-600" : "bg-gray-300"
+            className={`w-2 h-2 rounded-full cursor-pointer ${currentIndex === index ? "bg-gray-900" : "bg-gray-300"
               }`}
           />
         ))}
