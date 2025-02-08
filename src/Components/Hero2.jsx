@@ -1,35 +1,58 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import jazznight from "../assets/jazznight.jpg";
+import rock from "../assets/rock.jpg";
+import musicfest from "../assets/musicfest.jpg";
+import electronic from "../assets/electronic.jpg";
+import rhythm from "../assets/rhythm.jpg";
+import otwo from "../assets/otwo.jpg";
+
 const Hero2 = () => {
   const slides = [
     {
       id: 1,
-      images: [
-        { src: "/tango.jpg", label: "TANGO LESSONS" },
-        { src: "/speed-dating.jpg", label: "SINGLES SPEED DATING" }
-      ],
-      text: "SOULMATES OR FIRST DATES\nWE'VE GOT JUST THE THING.",
-      buttonText: "Plan Valentine’s Day"
+      image: jazznight,
+      label: "Jazz Night",
+      text: "Smooth tunes and candlelight,\nJoin us for a jazzy night.",
+      buttonText: "Plan Your Evening"
     },
     {
       id: 2,
-      images: [
-        { src: "/chocolate.jpg", label: "CHOCOLATE TASTING" },
-        { src: "/wine.jpg", label: "WINE PAIRING" }
-      ],
-      text: "SWEET INDULGENCE\nA PERFECT PAIRING FOR LOVE.",
-      buttonText: "Discover Experiences"
+      image: rock,
+      label: "Rock Concert",
+      text: "Feel the beat, hear the sound,\nLet the music shake the ground!",
+      buttonText: "Get Your Tickets"
     },
     {
       id: 3,
-      images: [
-        { src: "/concert.jpg", label: "LIVE MUSIC" },
-        { src: "/dinner.jpg", label: "ROMANTIC DINNER" }
-      ],
-      text: "A NIGHT TO REMEMBER\nMUSIC, FOOD, AND LOVE.",
-      buttonText: "Book Now"
+      image: musicfest,
+      label: "Music Festival 2025",
+      text: "Dancing crowds and skies so bright,\nFestival vibes all day and night.",
+      buttonText: "Join the Fest"
+    },
+    {
+      id: 4,
+      image: electronic,
+      label: "Electronic Fest",
+      text: "Lights flash, the bass will drop,\nLet’s go hard, we’ll never stop!",
+      buttonText: "Feel the Energy"
+    },
+    {
+      id: 5,
+      image: rhythm,
+      label: "Rhythm Of The Night",
+      text: "Groove and sway, let’s take flight,\nLose yourself in the rhythm tonight.",
+      buttonText: "Dance With Us"
+    },
+    {
+      id: 6,
+      image: otwo,
+      label: "Rock Legends Live",
+      text: "Legends play, the crowd goes wild,\nHistory made, rock revived!",
+      buttonText: "Be Part of It"
     }
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -41,61 +64,68 @@ const Hero2 = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-
+    const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative mt-16 w-full max-w-screen-2xl mx-auto">
-      <div className="bg-red-800 text-white p-8 rounded-xl flex items-center relative overflow-hidden">
-        <button
+      <div className="bg-red-800 text-white p-10 rounded-xl flex items-center relative overflow-hidden">
+        {/* Left Button */}
+        {/* <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow"
         >
-          <ChevronLeft className="text-black w-4 h-4" />
-        </button>
+          <ChevronLeft className="text-black w-5 h-5" />
+        </button> */}
+
+        {/* Slide Content */}
         <div className="flex flex-col md:flex-row gap-8 items-center w-full justify-center">
-          <div className="flex gap-6">
-            {slides[currentIndex].images.map((img, index) => (
-              <div
-                key={index}
-                className="relative bg-gray-200 p-3 rounded-lg overflow-hidden"
-              >
-                <img src={img.src} alt={img.label} className="w-56 h-56 object-cover rounded-lg" />
-                <span className="absolute bottom-2 left-2 bg-red-700 text-white px-3 py-2 text-sm font-bold">{img.label}</span>
-              </div>
-            ))}
+          {/* Image */}
+          <div className="relative bg-gray-200 p-4 rounded-lg overflow-hidden">
+            <img
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].label}
+              className="w-96 h-96 object-cover rounded-lg"
+            />
+            <span className="absolute bottom-2 left-2 bg-red-700 text-white px-4 py-2 text-sm font-bold">
+              {slides[currentIndex].label}
+            </span>
           </div>
+
+          {/* Text Content */}
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold whitespace-pre-line">{slides[currentIndex].text}</h2>
-            <button className="mt-6 bg-white text-red-700 font-bold py-3 px-6 rounded text-lg">
+            <h2 className="text-4xl font-bold whitespace-pre-line leading-tight">
+              {slides[currentIndex].text}
+            </h2>
+            <button className="mt-6 bg-white text-red-700 font-bold py-4 px-8 rounded text-lg">
               {slides[currentIndex].buttonText}
             </button>
           </div>
         </div>
-        <button
-          onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
-        >
-          <ChevronRight className="text-black w-4 h-4" />
-        </button>
 
+        {/* Right Button */}
+        {/* <button
+          onClick={nextSlide}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow"
+        >
+          <ChevronRight className="text-black w-5 h-5" />
+        </button> */}
       </div>
+
+      {/* Pagination Dots */}
       <div className="flex justify-center mt-6 gap-3">
         {slides.map((_, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full cursor-pointer ${currentIndex === index ? "bg-gray-900" : "bg-gray-300"
+            className={`w-1 h-1 rounded-full cursor-pointer ${currentIndex === index ? "bg-gray-900" : "bg-gray-300"
               }`}
           />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Hero2;
