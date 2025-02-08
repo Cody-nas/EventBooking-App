@@ -1,5 +1,4 @@
-// import React from "react";
-// import { GoCopilot } from "react-icons/go";
+import React from "react";
 import Background from "../assets/Background.jpg";
 
 const Hero = () => {
