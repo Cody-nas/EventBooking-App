@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import musicfest from "../assets/musicfest.jpg";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaParking } from "react-icons/fa";
 import { IoTicketSharp } from "react-icons/io5";
@@ -6,6 +7,7 @@ import { IoTicketSharp } from "react-icons/io5";
 const Events = () => {
   const [ticketCount, setTicketCount] = useState(1);
   const ticketPrice = 1.95;
+  const navigate = useNavigate();
   const [reviews, setReviews] = useState([
     { name: "Alice Johnson", comment: "Amazing experience!" },
     { name: "Michael Brown", comment: "Loved every moment of it." },
@@ -35,7 +37,15 @@ const Events = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-12 p-6">
+    <div className="max-w-4xl mx-auto mt-2 p-6">
+
+      {/* Back to Home Button */}
+      <button
+        onClick={() => navigate("/")}
+        className="mb-4 px-4 py-2 bg-blue-700 text-white rounded-lg font-semibold shadow-md transform transition-all hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        ← Back to Home
+      </button>
       <img src={musicfest} alt="" className="w-full rounded-lg" />
       <h2 className="text-lg font-semibold mt-4">Tuesday, March 25</h2>
       <h1 className="text-3xl font-bold text-gray-900">Music Festival 2025</h1>
