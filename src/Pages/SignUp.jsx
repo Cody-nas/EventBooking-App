@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Bg from "../assets/loginBG.mp4";
 
 const Signup = () => {
@@ -7,6 +8,8 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [agreeTerms, setAgreeTerms] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -95,6 +98,12 @@ const Signup = () => {
             Sign Up
           </button>
         </form>
+        <button
+          onClick={() => navigate('/')}
+          className="mt-4 w-full py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition"
+        >
+          Go Back Home
+        </button>
       </div>
     </div>
   );

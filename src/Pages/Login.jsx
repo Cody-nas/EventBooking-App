@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import BG from "../assets/signBG.mp4";
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
       </video>
 
       {/* Login Form (Content on top) */}
-      <div className="relative z-10 w-[80%] max-w-md p-6 backdrop-blur-2xl bg-opacity-90  rounded-2xl shadow-lg">
+      <div className="relative z-10 w-[80%] max-w-md p-6 backdrop-blur-2xl bg-opacity-90 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-semibold text-center text-black mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -69,6 +70,10 @@ const Login = () => {
             Login
           </button>
         </form>
+        <div className="mt-4 text-center text-sm">
+          <span>Don't have an account? </span>
+          <Link to="/signup" className="text-blue-500 hover:underline">Sign up instead</Link>
+        </div>
       </div>
     </div>
   );
