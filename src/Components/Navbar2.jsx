@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Search Bar (Hidden on Mobile) */}
-        <div className="hidden md:flex items-center w-1/3 bg-gray-100 rounded-full px-4 py-2 shadow-sm">
+        <div className="hidden md:flex items-center w-1/3 bg-gray-100 rounded-full px-4 py-1 shadow-sm">
           <FaSearch className="text-gray-500" />
           <input
             type="text"
@@ -43,7 +43,7 @@ const Navbar = () => {
             <span className="text-gray-700">{location}</span>
           </div>
           <button className="bg-blue-700 text-white rounded-full p-2 ml-2">
-            <FaSearch />
+            <FaSearch className="w-3 h-3" />
           </button>
         </div>
 
