@@ -27,10 +27,10 @@ const Login = () => {
 
       {/* Login Form (Content on top) */}
       <div className="relative z-10 w-[80%] max-w-md p-6 backdrop-blur-2xl bg-opacity-90 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-semibold text-center text-black mb-6">Login</h2>
+        <h2 className="text-2xl font-semibold text-center text-white mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-black text-sm mb-1">Email</label>
+            <label className="block text-white text-sm mb-1">Email</label>
             <input
               type="email"
               value={email}
@@ -41,7 +41,7 @@ const Login = () => {
             />
           </div>
           <div>
-            <label className="block text-black text-sm mb-1">Password</label>
+            <label className="block text-white text-sm mb-1">Password</label>
             <input
               type="password"
               value={password}
@@ -61,7 +61,7 @@ const Login = () => {
               />
               <span>Remember me</span>
             </label>
-            <a href="#" className="text-blue-500 hover:underline">Forgot password?</a>
+            <a href="#" className="text-white hover:underline">Forgot password?</a>
           </div>
           <button
             type="submit"
@@ -72,7 +72,7 @@ const Login = () => {
         </form>
         <div className="mt-4 text-center text-sm">
           <span>Don't have an account? </span>
-          <Link to="/signup" className="text-blue-500 hover:underline">Sign up instead</Link>
+          <Link to="/signup" className="text-white hover:underline">Sign up instead</Link>
         </div>
       </div>
     </div>
