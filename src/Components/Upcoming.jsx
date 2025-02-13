@@ -100,6 +100,7 @@ const events = [
   },
 ];
 
+
 const Upcoming = () => {
   return (
     <div>
