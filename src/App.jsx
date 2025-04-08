@@ -3,13 +3,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Footer from "./Components/Footer";
+
 import Purchase from "./Pages/Purchase";
 import SignUp from "./Pages/Signup";
 import Login from "./Pages/Login";
 import Events from "./Pages/Events";
 import FindEvents from "./Pages/FindEvents";
-import Dashboard from "./Pages/Dashboard/index";
+import Dashboard from "./Dashboard/DashboardLayout";
+import DashboardHome from "./Dashboard/DashboardPages/Overview";
 
 import "./App.css";
 
@@ -26,8 +27,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/events" element={<Events />} />
         <Route path="/FindEvents" element={<FindEvents />} />
+        <Route path="/dashboard/home" element={<DashboardHome />} />
       </Routes>
-      <Footer />
     </>
   );
 }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import BG from "../assets/signBG.mp4";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = (e) => {
@@ -27,7 +27,9 @@ const Login = () => {
 
       {/* Login Form (Content on top) */}
       <div className="relative z-10 w-[80%] max-w-md p-6 backdrop-blur-2xl bg-opacity-90 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-semibold text-center text-white mb-6">Login</h2>
+        <h2 className="text-2xl font-semibold text-center text-white mb-6">
+          Login
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-white text-sm mb-1">Email</label>
@@ -59,20 +61,26 @@ const Login = () => {
                 onChange={() => setRememberMe(!rememberMe)}
                 className="rounded  border-gray-300"
               />
-              <span className='text-white'>Remember me</span>
+              <span className="text-white">Remember me</span>
             </label>
-            <a href="#" className="text-white hover:underline">Forgot password?</a>
+            <a href="#" className="text-white hover:underline">
+              Forgot password?
+            </a>
           </div>
-          <button
-            type="submit"
-            className="w-full py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
-          >
-            Login
-          </button>
+          <Link to="/dashboard">
+            <button
+              type="submit"
+              className="w-full py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            >
+              Login
+            </button>
+          </Link>
         </form>
         <div className="mt-4 text-center text-sm">
           <span>Don't have an account? </span>
-          <Link to="/signup" className="text-white hover:underline">Sign up instead</Link>
+          <Link to="/signup" className="text-white hover:underline">
+            Sign up instead
+          </Link>
         </div>
       </div>
     </div>

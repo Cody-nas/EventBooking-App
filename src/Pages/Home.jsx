@@ -3,6 +3,7 @@ import Top from "../Components/Top";
 import Banner from "../Components/Banner";
 import Upcoming from "../Components/Upcoming";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const Home = () => {
       <Upcoming />
       <Top />
       <Banner />
+      <Footer />
     </div>
   );
 };
