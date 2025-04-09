@@ -14,8 +14,8 @@ import logoDark from "../assets/logo-dark.svg";
 import { cn } from "../utils/cn";
 
 const navItems = [
-  { path: "/dashboard/home", name: "Overview", icon: FiHome },
-  { path: "/events", name: "Events", icon: FiCalendar },
+  { path: "/dashboard", name: "Overview", icon: FiHome },
+  { path: "/dashboardevents", name: "Events", icon: FiCalendar },
   { path: "/messages", name: "Messages", icon: FiMessageSquare },
   { path: "/create-event", name: "Create Event", icon: FiPlus },
 ];
