@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-
+import Create from "../DashboardComponents/CreateEvent";
 import Sidebar from "../DashboardComponents/Sidebar";
 import Navbar from "../DashboardComponents/Navbar";
 
@@ -28,7 +28,9 @@ const CreateEvent = () => {
           toggleSidebar={toggleSidebar}
           toggleMobileSidebar={toggleMobileSidebar}
         />
-        <main className="p-6 max-h-screen overflow-auto"></main>
+        <main className="p-6 max-h-screen overflow-auto">
+          <Create />
+        </main>
       </div>
     </div>
   );
