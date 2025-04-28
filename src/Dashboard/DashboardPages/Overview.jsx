@@ -39,4 +39,3 @@ const Overview = () => {
 };
 
 export default Overview;
-// This component is the main entry point for the dashboard overview page. It imports and uses the Sidebar and Navbar components, and renders the Home component as the main content area. The state variables manage the sidebar's collapsed state and mobile sidebar visibility.
