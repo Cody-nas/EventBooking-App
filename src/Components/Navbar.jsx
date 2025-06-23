@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo-light.svg";
-
+import Logo from "../assets/logo-light.svg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +13,6 @@ const Navbar = () => {
     { name: "Find Events", path: "/FindEvents" },
     { name: "About", path: "/about" },
     { name: "Buy Tickets", path: "/purchase" },
-
-
-
   ];
 
   return (
