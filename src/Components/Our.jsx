@@ -15,10 +15,8 @@ const OurTeam = () => {
             </h2>
             <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
               Behind{" "}
-              <span className="font-semibold text-blue-500">
-                EvenTicket
-              </span>{" "}
-              is a talented team dedicated to making your event experience
+              <span className="font-semibold text-blue-500">EvenTicket</span> is
+              a talented team dedicated to making your event experience
               extraordinary. We are innovators, strategists, and visionaries
               working together to create unforgettable moments.
             </p>
@@ -33,12 +31,17 @@ const OurTeam = () => {
                 alt="Team Member"
                 className="w-32 h-32 max-w-[128px] rounded-full shadow-md object-cover object-top aspect-square"
               />
-              <h3 className="mt-6 text-2xl font-bold text-gray-800">Okazila Wisdom</h3>
-              <p className="text-blue-500 text-sm font-semibold mt-2">CEO & Visionary</p>
+              <h3 className="mt-6 text-2xl font-bold text-gray-800">
+                Okazila Wisdom
+              </h3>
+              <p className="text-blue-500 text-sm font-semibold mt-2">
+                CEO & Visionary
+              </p>
               <p className="mt-4 text-center text-gray-600 leading-relaxed">
                 Wisdom is the driving force behind{" "}
-                <span className="font-semibold">The Martins Ticket</span>, blending
-                innovation with a passion for bringing people closer to life’s biggest moments.
+                <span className="font-semibold">The Martins Ticket</span>,
+                blending innovation with a passion for bringing people closer to
+                life’s biggest moments.
               </p>
             </div>
 
@@ -49,12 +52,16 @@ const OurTeam = () => {
                 alt="Team Member"
                 className="w-32 h-32 max-w-[128px] rounded-full shadow-md object-cover object-top aspect-square"
               />
-              <h3 className="mt-6 text-2xl font-bold text-gray-800">Dule Martins</h3>
+              <h3 className="mt-6 text-2xl font-bold text-gray-800">
+                Dule Martins
+              </h3>
               <p className="text-blue-500 text-sm font-semibold mt-2">
                 Chief Technology Officer
               </p>
               <p className="mt-4 text-center text-gray-600 leading-relaxed">
-                Martins ensures that our platform is cutting-edge and user-friendly, delivering a seamless experience to event-goers worldwide.
+                Martins ensures that our platform is cutting-edge and
+                user-friendly, delivering a seamless experience to event-goers
+                worldwide.
               </p>
             </div>
 
@@ -65,14 +72,18 @@ const OurTeam = () => {
                 alt="Team Member"
                 className="w-32 h-32 max-w-[128px] rounded-full shadow-md object-cover object-top aspect-square"
               />
-              <h3 className="mt-6 text-2xl font-bold text-gray-800">Weli Chisom</h3>
-              <p className="text-blue-500 text-sm font-semibold mt-2">Head of Marketing</p>
+              <h3 className="mt-6 text-2xl font-bold text-gray-800">
+                Weli Chisom
+              </h3>
+              <p className="text-blue-500 text-sm font-semibold mt-2">
+                Head of Marketing
+              </p>
               <p className="mt-4 text-center text-gray-600 leading-relaxed">
-                Chisom's creativity and strategy ensure that every event finds its audience, turning moments into memories.
+                Chisom's creativity and strategy ensure that every event finds
+                its audience, turning moments into memories.
               </p>
             </div>
           </div>
-
         </div>
       </section>
     </div>
