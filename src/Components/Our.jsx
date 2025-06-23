@@ -1,5 +1,5 @@
 import martins from "../assets/martins.jpg";
-import chisom from "../assets/chisom.jpg";
+import chisom from "../assets/wisdom.jpg";
 import wisdom from "../assets/wisdom.jpg";
 
 const OurTeam = () => {
