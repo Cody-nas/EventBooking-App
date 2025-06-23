@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import Logo from "../assets/Logo-dark.svg";
+import Logo from "../assets/logo-dark.svg";
 
 const Footer = () => {
   return (
@@ -13,13 +13,21 @@ const Footer = () => {
             Eventick
           </h2>
           <p className="text-sm mt-2">
-            Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find, and attend events that fuel their passions and enrich their lives.
+            Eventick is a global self-service ticketing platform for live
+            experiences that allows anyone to create, share, find, and attend
+            events that fuel their passions and enrich their lives.
           </p>
           {/* Social Media Icons */}
           <div className="flex gap-4 mt-4">
-            <a href="#" className="text-white hover:text-gray-300 text-lg"><FaFacebookF /></a>
-            <a href="#" className="text-white hover:text-gray-300 text-lg"><FaTwitter /></a>
-            <a href="#" className="text-white hover:text-gray-300 text-lg"><FaLinkedinIn /></a>
+            <a href="#" className="text-white hover:text-gray-300 text-lg">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="text-white hover:text-gray-300 text-lg">
+              <FaTwitter />
+            </a>
+            <a href="#" className="text-white hover:text-gray-300 text-lg">
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
 
@@ -27,10 +35,26 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg">Plan Events</h3>
           <ul className="mt-2 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Create and Set Up</a></li>
-            <li><a href="#" className="hover:underline">Sell Tickets</a></li>
-            <li><a href="#" className="hover:underline">Online RSVP</a></li>
-            <li><a href="#" className="hover:underline">Online Events</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Create and Set Up
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Sell Tickets
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Online RSVP
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Online Events
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -38,20 +62,51 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg">Eventick</h3>
           <ul className="mt-2 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">About Us</a></li>
-            <li><a href="#" className="hover:underline">Press</a></li>
-            <li><a href="#" className="hover:underline">Contact Us</a></li>
-            <li><a href="#" className="hover:underline">Help Center</a></li>
-            <li><a href="#" className="hover:underline">How It Works</a></li>
-            <li><a href="#" className="hover:underline">Privacy</a></li>
-            <li><a href="#" className="hover:underline">Terms</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Press
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Help Center
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                How It Works
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Terms
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Stay in the Loop */}
         <div>
           <h3 className="font-semibold text-lg">Stay In The Loop</h3>
-          <p className="text-sm mt-2">Join our mailing list to stay in the loop with our newest event and concert.</p>
+          <p className="text-sm mt-2">
+            Join our mailing list to stay in the loop with our newest event and
+            concert.
+          </p>
           <div className="mt-4">
             <input
               type="email"
